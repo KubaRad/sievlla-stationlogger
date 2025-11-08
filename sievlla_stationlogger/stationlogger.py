@@ -135,7 +135,7 @@ class StationLogger:
             self._stored_data = None
         else:
             self._stored_data = pd.read_csv(self.configuration.data_file, parse_dates=[0], names=_CSV_COLUMN_NAMES,
-                usecols=_CSV_COLUMN_NAMES, index_col=0, header=1,
+                usecols=_CSV_COLUMN_NAMES, index_col=0, header=0,
                 dtype={'value': np.float64})
 
     def _find_last_stored_measurement(self):
